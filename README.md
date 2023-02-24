@@ -32,7 +32,7 @@ This is an Students Reporting System, A simple Backend Project for managing Stud
 
 # Lessons Learned
 
-- Gain excessive knowledge on application of Java and MySQL.
+- Gain excessive knowledge on application of ElasticSearch, Kibana and JSP.
 - Enjoyed the process of learning and creating the application.
 
 # Feedback
