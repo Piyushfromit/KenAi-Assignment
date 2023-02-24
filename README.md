@@ -2,7 +2,7 @@
 # Salesken.Ai company Assignment 
 
 This is an Students Reporting System, A simple Backend Project for managing Student data.
-<img align="center" alt="Coding" width="70%" src="(https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png)">
+<img align="center" alt="Coding" width="70%" src="https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png">
   ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png) 
   
   ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/two.png) 
