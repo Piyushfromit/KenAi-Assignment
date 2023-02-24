@@ -3,7 +3,7 @@
 
 This is an Students Reporting System, A simple Backend Project for managing Student data.
 
-  [home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png) 
+  ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png) 
 
 Using this schema
 This Project works on JDBC and deployed on local server.
