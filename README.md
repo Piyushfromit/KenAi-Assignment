@@ -4,44 +4,30 @@
 This is an Students Reporting System, A simple Backend Project for managing Student data.
 
   ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png) 
-
-Using this schema
-This Project works on JDBC and deployed on local server.
-
-It has different level of access for Student and Admin
-
-# 👉 [Click here](https://drive.google.com/file/d/1FmEfpLvEkz7O0fGPT_q3aG2oiyxqsX2r/view?usp=share_link) to go through detail explanation of this application 
-
-## User
-- Admin
-- Student
-
-## Admin Privilege
-- Can Add or Remove Student
-- Can Add or Remove Course and Batch
-- Add a new Courses
-- Update Fees of course.
-- Delete  a course from any Training session.
-- Search information about a course.
-- Create Batch under a course.
-- Allocate students in a Batch under a course.
-- Update total seats of a batch.
-- View the students of every batch. 
-
-
-## Student Privilege
-- Student Login
-- New Student Registration
-- Can All Courses and Seats Available
+  
+  ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/two.png) 
+  
+  ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/three.png) 
+  
+  ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/four.png) 
+  
+  ![home page](https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/five.png) 
 
 ## Features
-- While creating the Batch for a course, a student can be added to multiple batches considering that it is not exceeding the limit of the batch size.
-- A student can be added to multiple batches of different course but not of the same course.
+- Add Student
+- Get Average Percentage of whole class in recent semester
+- Get Average marks of Students in a subject
+- Get Top 2 Consistent Students across all semesters (Maximum average marks)
+
 
 # Technology used 
 
 - Java
-- MySQL
+- ElasticSearch
+- Kibana
+- SpringBoot
+- JSP
+- HTML
 - Git & GitHub
 
 # Lessons Learned
