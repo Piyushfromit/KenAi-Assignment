@@ -20,15 +20,17 @@ This is an Students Reporting System, A simple Backend Project for managing Stud
 - Get Top 2 Consistent Students across all semesters (Maximum average marks)
 
 
-# Technology used 
+# Tech-Stacks Used
 
 - Java
 - ElasticSearch
 - Kibana
-- SpringBoot
+- Spring Boot
 - JSP
 - HTML
+- CSS
 - Git & GitHub
+
 
 # Lessons Learned
 
