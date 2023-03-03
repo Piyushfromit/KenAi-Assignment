@@ -12,10 +12,7 @@
     }
     h1{
         text-align: center;
-      
-        
     }
-    
     form{
         display: flex;
         flex-direction: column;
@@ -43,12 +40,10 @@
 </style>
 
 <body>
-
-<h1>Top 2 Students</h1>
-<form method="post">
-    <h1>Click to get top 2 Students</h1>
-    <button>Click</button>
-</form>
-
+         <h1>Top 2 Students</h1>
+      <form method="post">
+          <h1>Click to get top 2 Students</h1>
+          <button>Click</button>
+      </form>
 </body>
 </html>

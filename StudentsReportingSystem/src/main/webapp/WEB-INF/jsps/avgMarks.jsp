@@ -12,10 +12,7 @@
     }
     h1{
         text-align: center;
-       
-        
     }
-    
     form{
         display: flex;
         flex-direction: column;

@@ -23,63 +23,67 @@ import com.masai.repository.StudentRepo;
 public class StudentUIController {
 
 	@Autowired
-	private StudentRepo sRepo;
+	private StudentRepo studentRepo;
 
-	@GetMapping("/welcome")
+	@GetMapping("/welcome")   
 	public String welcome() {
-		return "welcome";
-
-	}
-
-	@GetMapping("/saveStudent")
+		return "welcome";     
+    } 
+	
+    @GetMapping("/saveStudent")    
 	public String saveStudent() {
-		return "saveStudent";
+		return "saveStudent";    
 
 	}
 
-	@PostMapping("/saveStudent")
+	@PostMapping("/saveStudent")     // save Student
 	public String saveStudent(@RequestParam Integer studentRoll, @RequestParam String studentName,
 			@RequestParam Integer mathematicsMark, @RequestParam Integer scienceMark, @RequestParam Integer englishMark,
 			@RequestParam Integer semester) {
 		Student student = new Student(studentRoll, studentName, mathematicsMark, scienceMark, englishMark, semester);
-		sRepo.save(student);
+		studentRepo.save(student);
 		return "welcome";
-
-	}
+    }
 
 	@GetMapping("/getPercentage")
 	public String getPercentageView() {
 		return "getPercentage";
 	}
 
-	@PostMapping("/getPercentage")
+	@PostMapping("/getPercentage")  // average percentage of class in semester
 	public String getPercentageView(Model model, @RequestParam Integer semester) {
+		if(semester !=1 || semester!=2) {
+			return null;
+		}
 		int sum = 0;
 		int count = 0;
-		List<Student> std = sRepo.findBySemester(semester);
-		for (Student sts : std) {
+		List<Student> std = studentRepo.findBySemester(semester);
+		for (Student stude : std) {
 			count++;
-			sum = sum + sts.getMathematicsMark() + sts.getEnglishMark() + sts.getScienceMark();
+			sum = sum + stude.getMathematicsMark() + stude.getEnglishMark() + stude.getScienceMark();
 		}
 		sum = sum / count;
 		sum = sum * 100 / 300;
-		model.addAttribute("avg", sum);
-		return "getPercentageResult";
+		model.addAttribute("avg", sum);  // keeping this data in model object
+		return "getPercentageResult";  // returning the JSP page name of same name
 	}
 
 	@GetMapping("/avgMarks")
 	public String avgMarks() {
-
+        
 		return "avgMarks";
 	}
 
-	@PostMapping("/avgMarks")
+	@PostMapping("/avgMarks")    // average Marks of student in subject
 	public String avgMarks(Model model, @RequestParam String subject) {
-		Iterable<Student> itr = sRepo.findAll();
+		Iterable<Student> itr = studentRepo.findAll();  //findAll will not return List,
 		List<Student> students = new ArrayList<>();
-		itr.forEach(students::add);
-		int count = 0;
-		int sum = 0;
+		//itr.forEach(students::add);
+		for(Student s : itr){
+		    students.add(s);
+		}
+		int count = 0;   // count of student
+		int sum = 0;    // sum of all subject marks
 		for (Student st : students) {
 			System.out.println(st);
 			count++;
@@ -92,7 +96,7 @@ public class StudentUIController {
 			}
 		}
 		model.addAttribute("avgMarks", sum / count);
-		return "avgResult";
+		return "avgResult";      // returning JSP    
 	}
 
 	@GetMapping("/topTwo")
@@ -100,15 +104,17 @@ public class StudentUIController {
 		return "topTwo";
 	}
 
-	@PostMapping("/topTwo")
+	@PostMapping("/topTwo")   // Top two student of maximum average marks
 	public String topView(Model model) {
-		Iterable<Student> itr = sRepo.findAll();
-
-		List<Student> students = new ArrayList<>();
-		itr.forEach(students::add);
+		Iterable<Student> itr = studentRepo.findAll();
+        List<Student> students = new ArrayList<>();
+		
+		for(Student s : itr){
+		    students.add(s);
+		}
 		HashMap<String, Integer> map = new HashMap<>();
 		for (Student st : students) {
-			map.put(st.getStudentName(), (st.getMathematicsMark() + st.getEnglishMark() + st.getScienceMark()) / 3);
+			map.put(st.getStudentName(), ( st.getMathematicsMark() + st.getEnglishMark() + st.getScienceMark()) / 3);
 		}
 
 		List<Entry<String, Integer>> list = new LinkedList<Entry<String, Integer>>(map.entrySet());
@@ -120,6 +126,9 @@ public class StudentUIController {
 			}
 
 		});
+		
+		
+	    
 
 		List<String> st = new ArrayList<>();
 		int count = 1;
@@ -128,10 +137,9 @@ public class StudentUIController {
 				st.add(name.getKey());
 				count++;
 			}
-
-		}
+        }
 
 		model.addAttribute("top2", st);
-		return "topTwoResult";
+		return "topTwoResult";       // returning JSP
 	}
 }

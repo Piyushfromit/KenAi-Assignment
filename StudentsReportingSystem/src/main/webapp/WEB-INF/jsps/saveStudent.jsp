@@ -15,7 +15,6 @@
         
         
     }
-    
     form{
         display: flex;
         flex-direction: column;
@@ -38,7 +37,6 @@
         font-size: 30px;
         width: 50%;
         margin: auto;
-        
     }
     button:hover{
         background-color: green;

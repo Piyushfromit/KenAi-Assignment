@@ -6,7 +6,6 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 </head>
-
 <style>
     *{
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -14,9 +13,7 @@
     h1{
         text-align: center;
         color: red;
-        
-    }
-
+      }
     #container{
         border: 5px solid black;
         width: 55%;
@@ -37,10 +34,7 @@
         color: aliceblue;
         cursor: pointer;
     }
-
-
 </style>
-
 <body>
 
 <h1> Welcome to Student Repository </h1>
