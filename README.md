@@ -1,6 +1,8 @@
 
 # Salesken.Ai company Assignment 
 
+#                   Students Reporting System
+
 This is an Students Reporting System, A simple Backend Project for managing Student data.
 <img align="center" alt="Coding" width="90%" src="https://github.com/Piyushfromit/KenAi-Assignment/blob/main/Data/one.png">
 
@@ -20,15 +22,17 @@ This is an Students Reporting System, A simple Backend Project for managing Stud
 - Get Top 2 Consistent Students across all semesters (Maximum average marks)
 
 
-# Technology used 
+# Tech-Stacks Used
 
 - Java
 - ElasticSearch
 - Kibana
-- SpringBoot
+- Spring Boot
 - JSP
 - HTML
+- CSS
 - Git & GitHub
+
 
 # Lessons Learned
 
